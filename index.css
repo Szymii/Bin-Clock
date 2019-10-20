@@ -1,0 +1,106 @@
+*{
+	font-family : Helvetica;
+}
+body{
+	background-image : url("https://hdqwalls.com/download/blur-background-6z-1920x1080.jpg");
+	color : white;
+}
+h1{
+	text-align : center;
+}
+hr{
+	margin : 0px;
+}
+span{
+	font-size : 2em;
+	margin-right : 10px;
+	letter-spacing: 30px;
+}
+.main{
+	display : grid;
+	grid-template-columns :1fr 1fr 1fr;
+	grid-template-rows : 200px 0px 40px;
+ 	width : 700px;
+	text-align : center;
+	margin : 50px auto;
+	padding : 0px;
+}
+.display{
+	padding-left : 50px;
+}
+.line{
+	grid-area : 2 / 1 / auto /span 3;
+}
+.left{
+	height : 200px;
+	float : left;
+	
+}
+.right{
+	height : 200px;
+	float : left;
+}
+.left>div{
+	border-radius : 50%;
+	height : 40px;
+	width : 40px;
+	background-color : gray;
+	opacity: 0.2;
+	margin : 5px;
+	position : relative;
+	top : 45px;
+}
+.right>div{
+	border-radius : 50%;
+	height : 40px;
+	width : 40px;
+	background-color : gray;
+	opacity: 0.2;
+	position : relative;
+	margin : 5px;
+}
+#invisible{
+	visibility:hidden;
+}
+@media(max-width: 450px) {
+	.main{
+		display : grid;
+		grid-template-columns :1fr 1fr 1fr;
+		grid-template-rows : 200px 0px 40px;
+		width : 350px;
+		text-align : center;
+		margin : 50px auto;
+		padding : 0px;
+	}
+	.display{
+		padding-left : 0px;
+	}
+}
+@media(max-width: 650px) and (min-width: 451px){
+	.main{
+		display : grid;
+		grid-template-columns :1fr 1fr 1fr;
+		grid-template-rows : 200px 0px 40px;
+		width : 500px;
+		text-align : center;
+		margin : 50px auto;
+		padding : 0px;
+	}
+	.display{
+		padding-left : 15px;
+	}
+}
+@media(max-width: 750px) and (min-width: 651px){
+	.main{
+		display : grid;
+		grid-template-columns :1fr 1fr 1fr;
+		grid-template-rows : 200px 0px 40px;
+		width : 700px;
+		text-align : center;
+		margin : 50px auto;
+		padding : 0px;
+	}
+	.display{
+		padding-left : 50px;
+	}
+}
