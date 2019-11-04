@@ -3,6 +3,7 @@
 }
 body{
 	background-image : url("https://hdqwalls.com/download/blur-background-6z-1920x1080.jpg");
+	background-size: cover;
 	color : white;
 }
 h1{
