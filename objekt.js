@@ -1,10 +1,10 @@
-var time = function(){
-    var time = new Date();
-	var hour = time.getHours();
-	var min = time.getMinutes();
-    var sec = time.getSeconds();
+let time = function(){
+    let time = new Date();
+	let hour = time.getHours();
+	let min = time.getMinutes();
+    let sec = time.getSeconds();
     
-    const tab = [];
+    let tab = [];
 	tab[0] = (hour - hour%10)/10;
 	tab[1] = (hour%10);
 			
@@ -22,7 +22,7 @@ var time = function(){
 	if(min<10){document.getElementById("minutes").style.marginLeft = 55 + "px";}else{document.getElementById("minutes").style.removeProperty('margin');}
 	if(sec<10){document.getElementById("seconds").style.marginLeft = 55 + "px";}else{document.getElementById("seconds").style.removeProperty('margin');}
     
-    var Objekt = function(i,kolumna){
+    Objekt = function(i,kolumna){
         this.i = i;
         this.kolumna = kolumna;
     }
@@ -30,9 +30,9 @@ var time = function(){
 		return (dec).toString(2);
     }
     Objekt.prototype.zyj = function(){
-        var x = dec2bin(tab[i]);
-        var y = 1;
-        for(var j=this.kolumna.length-1;j>=0;j--){
+        let x = dec2bin(tab[this.i]);
+        let y = 1;
+        for(let j=this.kolumna.length-1;j>=0;j--){
             if(x[x.length-y]!= "1"){
                 this.kolumna[j].style.backgroundColor = "gray";
                 this.kolumna[j].style.opacity = 0.2;
@@ -45,8 +45,8 @@ var time = function(){
         }
     }
     
-    for(var i = 0;i < 6; i++){
-        var zegar = new Objekt(i,document.getElementsByClassName("h"+i))
+    for(let i = 0;i < 6; i++){
+        let zegar = new Objekt(i,document.getElementsByClassName("h"+i))
         zegar.zyj();
     }
 }
